@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@600&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      .main-frame {
+        height: 1970px;
+        background-color: #040404;
+        position: relative;
+      }
+      .outer-box {
+        position: absolute;
+        width: 70%;
+        height: 1594px;
+        top: 188px;
+        background: linear-gradient(
+          106.32deg,
+          rgba(255, 255, 255, 0.34) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        border: 8px solid #ffffff;
+        backdrop-filter: blur(100px);
+        /* Note: backdrop-filter has minimal browser support */
+        border-radius: 80px;
+        /* Center Horizontally */
+        margin-left: 50%;
+        transform: translateX(-50%);
+      }
+      .header {
+        position: relative;
+        padding: 150px;
+      }
+      .header-items {
+        display: inline-block;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      /* Logo */
+      .header-item-1 {
+        position: absolute;
+        left: 134px;
+      }
+      .header-item-2 {
+        position: absolute;
+        left: 502px;
+        font-family: "Roboto";
+        font-size: 2.75rem;
+        color: white;
+      }
+      li {
+        display: inline-block;
+        margin-right: 88px;
+      }
+      .header-item-3 {
+        position: absolute;
+        right: 535px;
+        font-family: "Roboto";
+        font-size: 2.75rem;
+        color: white;
+      }
+      .header-item-4 {
+        position: absolute;
+        right: 127px;
+        width: 297px;
+        height: 111px;
+        font-family: "Roboto";
+        font-size: 2.75rem;
+        color: white;
+        background-color: #ff64a5;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 24px;
+        text-align: center;
+      }
+      .middle-box {
+        position: absolute;
+        width: 2006px;
+        height: 859px;
+        top: 380px;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 7px solid #ffffff;
+        border-radius: 395px;
+        /* Center the items in the box */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .wording-ni {
+        position: absolute;
+        width: 644px;
+        height: 695px;
+        left: 166px;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 570px;
+        line-height: 695px;
+        color: #ffffff;
+      }
+      .wording-ke {
+        position: absolute;
+        width: 798px;
+        height: 695px;
+        right: 126px;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 570px;
+        line-height: 695px;
+        color: #ffffff;
+      }
+      .footer {
+        position: relative;
+        height: 200px;
+        top: 1000px;
+      }
+      .container-add-to-cart {
+        position: absolute;
+        width: 471px;
+        height: 111px;
+        left: 162px;
+        top: 100px;
+        background: #4729ff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Roboto;
+        font-size: 2.75rem;
+        color: white;
+      }
+      .ultra-mechanics {
+        position: absolute;
+        width: 584px;
+        height: 52px;
+        right: 103px;
+        top: 30px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-frame">
+      <div class="outer-box">
+        <!-- Header -->
+        <div class="header">
+          <!-- Nike logo -->
+          <div class="header-items header-item-1">
+            <img src="assets/logo-nike-small.png" alt="logo-nike-small" />
+          </div>
+          <!-- Header Menu -->
+          <div class="header-items header-item-2">
+            <ul class="left-box-menus">
+              <li>Man</li>
+              <li>Woman</li>
+              <li>Kid</li>
+              <li>Explore</li>
+            </ul>
+          </div>
+          <!-- Seacrh -->
+          <div class="header-items header-item-3">
+            <img
+              style="padding-right: 15px"
+              src="assets/search.png"
+              alt="search-icon"
+            />
+            Seacrh
+          </div>
+          <!-- Shop Now -->
+          <div class="header-items header-item-4">
+            <p style="margin-top: 10%; transform: translateY(-10%)">Shop Now</p>
+          </div>
+        </div>
+
+        <!-- Middle Box -->
+        <div class="middle-box">
+          <!-- Nike logo - large -->
+          <img
+            style="position: absolute"
+            src="assets/logo-nike-big.png"
+            alt="logo-nike-large"
+          />
+
+          <!-- Ni -->
+          <div class="wording-ni">NI</div>
+          <!-- Picture of Shoes -->
+          <img
+            style="position: absolute; left: 130px"
+            src="assets/shoes.png"
+            alt="shoes-picture"
+          />
+          <!-- KE -->
+          <div class="wording-ke">KE</div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+          <!-- Add to Cart -->
+          <div class="container-add-to-cart">
+            <img
+              style="padding-right: 37px"
+              src="assets/icon-cart.png"
+              alt="icon-cart"
+            />
+            Add to Cart
+          </div>
+
+          <!-- Ultra Mechanics -->
+          <div class="ultra-mechanics">
+            <div
+              style="
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 2.75rem;
+                line-height: 52px;
+              "
+            >
+              Ultra Mechanics
+            </div>
+            <div
+              style="
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 2rem;
+                line-height: 39px;
+                padding-top: 10px;
+              "
+            >
+              When a player steps in, a custom motor and gear train senses the
+              tension needed by the foot
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

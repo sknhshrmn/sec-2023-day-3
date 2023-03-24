@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .a4-box {
+        position: relative;
+        width: 595px;
+        height: 842px;
+        background: #110f57;
+      }
+      .contents-parent {
+        position: absolute;
+        left: 50px;
+        top: 50px;
+      }
+      /* Text - Work Together */
+      .contents-child-2 {
+        margin-top: 70px;
+        font-family: "Vollkorn";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 4rem;
+        line-height: 66px;
+        color: #00fb82;
+      }
+      /*  lorem ipsum text */
+      .contents-child-3 {
+        margin-top: 30px;
+        color: rgba(226, 226, 226, 0.7);
+        width: 300px;
+        font-weight: 500;
+        font-family: "Lato";
+        font-size: 0.875rem;
+        line-height: 24px;
+      }
+      /* Social media */
+      .contents-child-4 {
+        margin-top: 30px;
+      }
+      .logo-wrapper {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: white;
+        display: inline-block;
+        margin-right: 5px;
+      }
+      /* Picture */
+      .picture {
+        position: absolute;
+        top: 504px;
+      }
+      /* Lines */
+      .line-1 {
+        position: absolute;
+        width: 0px;
+        height: 88px;
+        top: -34px;
+        left: 406px;
+        border-radius: 20px;
+        border: 10px solid #00fb82;
+      }
+      .line-2 {
+        position: absolute;
+        width: 0px;
+        height: 176px;
+        top: -78px;
+        left: 449px;
+        border-radius: 20px;
+        border: 10px solid #fff500;
+      }
+      .line-3 {
+        position: absolute;
+        width: 0px;
+        height: 176px;
+        top: -34px;
+        left: 492px;
+        border-radius: 20px;
+        border: 10px solid #00fb82;
+      }
+      .line-4 {
+        position: absolute;
+        width: 0px;
+        height: 195px;
+        left: 535px;
+        top: -64px;
+        border-radius: 20px;
+        border: 10px solid #fff500;
+      }
+      /* Circles Group 1 */
+      .circle-group {
+        width: 19.87px;
+        height: 19.87px;
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.6);
+        transform: rotate(-10.13deg);
+      }
+      .circle-1 {
+        left: -21px;
+        top: 648.86px;
+      }
+      .circle-2 {
+        left: 6.38px;
+        top: 643.96px;
+      }
+      .circle-3 {
+        left: 33.76px;
+        top: 639.07px;
+      }
+      .circle-4 {
+        left: 61.13px;
+        top: 634.18px;
+      }
+      .circle-5 {
+        left: 88.51px;
+        top: 629.28px;
+      }
+      .circle-6 {
+        left: 115.89px;
+        top: 624.39px;
+      }
+      .circle-7 {
+        left: 143.27px;
+        top: 619.5px;
+      }
+      .circle-8 {
+        left: -16.11px;
+        top: 676.24px;
+      }
+      .circle-9 {
+        left: 11.27px;
+        top: 671.34px;
+      }
+      .circle-10 {
+        left: 38.65px;
+        top: 666.45px;
+      }
+      .circle-11 {
+        left: 66.03px;
+        top: 661.55px;
+      }
+      .circle-12 {
+        left: 93.41px;
+        top: 656.66px;
+      }
+      .circle-13 {
+        left: 120.78px;
+        top: 651.77px;
+      }
+      .circle-14 {
+        left: 148.16px;
+        top: 646.87px;
+      }
+      .circle-15 {
+        left: -11.21px;
+        top: 703.61px;
+      }
+      .circle-16 {
+        left: 16.17px;
+        top: 698.72px;
+      }
+      .circle-17 {
+        left: 43.54px;
+        top: 693.83px;
+      }
+      .circle-18 {
+        left: 70.92px;
+        top: 688.93px;
+      }
+      .circle-19 {
+        left: 98.3px;
+        top: 684.04px;
+      }
+      .circle-20 {
+        left: 125.68px;
+        top: 679.15px;
+      }
+      .circle-21 {
+        left: 153.06px;
+        top: 674.25px;
+      }
+      .circle-22 {
+        left: -6.32px;
+        top: 730.99px;
+      }
+      .circle-23 {
+        left: 21.06px;
+        top: 726.1px;
+      }
+      .circle-24 {
+        left: 48.44px;
+        top: 721.2px;
+      }
+      .circle-25 {
+        left: 75.82px;
+        top: 716.31px;
+      }
+      .circle-26 {
+        left: 103.19px;
+        top: 711.42px;
+      }
+      .circle-27 {
+        left: 130.57px;
+        top: 706.52px;
+      }
+      .circle-28 {
+        left: 157.95px;
+        top: 701.63px;
+      }
+      /* Circles Group 2 */
+      .circle-29 {
+        left: 411px;
+        top: 418.86px;
+      }
+      .circle-30 {
+        left: 415.89px;
+        top: 446.24px;
+      }
+      .circle-31 {
+        left: 420.79px;
+        top: 473.61px;
+      }
+      .circle-32 {
+        left: 425.68px;
+        top: 500.99px;
+      }
+      .circle-33 {
+        left: 438.38px;
+        top: 413.96px;
+      }
+      .circle-34 {
+        left: 443.27px;
+        top: 441.34px;
+      }
+      .circle-35 {
+        left: 448.17px;
+        top: 468.72px;
+      }
+      .circle-36 {
+        left: 453.06px;
+        top: 496.1px;
+      }
+      .circle-37 {
+        left: 465.76px;
+        top: 409.07px;
+      }
+      .circle-38 {
+        left: 470.65px;
+        top: 436.45px;
+      }
+      .circle-39 {
+        left: 475.54px;
+        top: 463.83px;
+      }
+      .circle-40 {
+        left: 480.44px;
+        top: 491.2px;
+      }
+      .circle-41 {
+        left: 493.13px;
+        top: 404.18px;
+      }
+      .circle-42 {
+        left: 498.03px;
+        top: 431.55px;
+      }
+      .circle-43 {
+        left: 502.92px;
+        top: 458.93px;
+      }
+      .circle-44 {
+        left: 507.82px;
+        top: 486.31px;
+      }
+      .circle-45 {
+        left: 520.51px;
+        top: 399.28px;
+      }
+      .circle-46 {
+        left: 525.41px;
+        top: 426.66px;
+      }
+      .circle-47 {
+        left: 530.3px;
+        top: 454.04px;
+      }
+      .circle-48 {
+        left: 535.19px;
+        top: 481.42px;
+      }
+      .circle-49 {
+        left: 547.89px;
+        top: 394.39px;
+      }
+      .circle-50 {
+        left: 552.78px;
+        top: 421.77px;
+      }
+      .circle-51 {
+        left: 557.68px;
+        top: 449.15px;
+      }
+      .circle-52 {
+        left: 562.57px;
+        top: 476.52px;
+      }
+      .circle-53 {
+        left: 575.27px;
+        top: 389.5px;
+      }
+      .circle-54 {
+        left: 580.16px;
+        top: 416.87px;
+      }
+      .circle-55 {
+        left: 585.06px;
+        top: 444.25px;
+      }
+      .circle-56 {
+        left: 589.95px;
+        top: 471.63px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a4-box">
+      <div class="contents-parent">
+        <!-- STUDIOS9 -->
+        <div>
+          <img src="assets/STU IOS9.png" alt="stu ios9" />
+          <img
+            style="margin-left: -75px"
+            src="assets/Logo Shapes 26.png"
+            alt="logo"
+          />
+        </div>
+        <!-- Title -->
+        <div class="contents-child-2">
+          Work <br />
+          Together
+        </div>
+        <!-- Texts -->
+        <div class="contents-child-3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.
+        </div>
+        <div class="contents-child-4">
+          <!-- Logo Google -->
+          <span class="logo-wrapper">
+            <!-- Center Vertically -->
+            <img
+              style="
+                margin-left: 50%;
+                transform: translateX(-50%);
+                margin-top: 15%;
+              "
+              src="assets/akar-icons_google-contained-fill.png"
+              alt="google-icon"
+            />
+          </span>
+
+          <!-- Logo Facebook -->
+          <span class="logo-wrapper">
+            <!-- Center Vertically --><img
+              style="
+                margin-left: 50%;
+                transform: translateX(-50%);
+                margin-top: 15%;
+              "
+              src="assets/akar-icons_facebook-fill.png"
+              alt="facebook-icon"
+            />
+          </span>
+
+          <!-- Logo Twitter -->
+          <span class="logo-wrapper">
+            <!-- Center Horizontally --><img
+              style="
+                margin-left: 50%;
+                transform: translateX(-50%);
+                margin-top: 15%;
+              "
+              src="assets/entypo-social_twitter-with-circle.png"
+              alt="twitter-icon"
+            />
+          </span>
+
+          <!-- Logo Linkedin -->
+          <span class="logo-wrapper">
+            <!-- Center Horizontally --><img
+              style="
+                margin-left: 50%;
+                transform: translateX(-50%);
+                margin-top: 15%;
+              "
+              src="assets/entypo-social_linkedin-with-circle.png"
+              alt="twitter-icon"
+            />
+          </span>
+        </div>
+      </div>
+
+      <!-- picture -->
+      <img
+        class="picture"
+        src="assets/unsplash_g1Kr4Ozfoac.png"
+        alt="picture"
+      />
+      <!-- Lines -->
+      <div class="line-1"></div>
+      <div class="line-2"></div>
+      <div class="line-3"></div>
+      <div class="line-4"></div>
+      <!-- Cirles Group 1-->
+      <div class="circle-group circle-1"></div>
+      <div class="circle-group circle-2"></div>
+      <div class="circle-group circle-3"></div>
+      <div class="circle-group circle-4"></div>
+      <div class="circle-group circle-5"></div>
+      <div class="circle-group circle-6"></div>
+      <div class="circle-group circle-7"></div>
+      <div class="circle-group circle-8"></div>
+      <div class="circle-group circle-9"></div>
+      <div class="circle-group circle-10"></div>
+      <div class="circle-group circle-11"></div>
+      <div class="circle-group circle-12"></div>
+      <div class="circle-group circle-13"></div>
+      <div class="circle-group circle-14"></div>
+      <div class="circle-group circle-15"></div>
+      <div class="circle-group circle-16"></div>
+      <div class="circle-group circle-17"></div>
+      <div class="circle-group circle-18"></div>
+      <div class="circle-group circle-19"></div>
+      <div class="circle-group circle-20"></div>
+      <div class="circle-group circle-21"></div>
+      <div class="circle-group circle-22"></div>
+      <div class="circle-group circle-23"></div>
+      <div class="circle-group circle-24"></div>
+      <div class="circle-group circle-25"></div>
+      <div class="circle-group circle-26"></div>
+      <div class="circle-group circle-27"></div>
+      <div class="circle-group circle-28"></div>
+      <!-- Cirles Group 2-->
+      <div class="circle-group circle-29"></div>
+      <div class="circle-group circle-30"></div>
+      <div class="circle-group circle-31"></div>
+      <div class="circle-group circle-32"></div>
+      <div class="circle-group circle-33"></div>
+      <div class="circle-group circle-34"></div>
+      <div class="circle-group circle-35"></div>
+      <div class="circle-group circle-36"></div>
+      <div class="circle-group circle-37"></div>
+      <div class="circle-group circle-38"></div>
+      <div class="circle-group circle-39"></div>
+      <div class="circle-group circle-40"></div>
+      <div class="circle-group circle-41"></div>
+      <div class="circle-group circle-42"></div>
+      <div class="circle-group circle-43"></div>
+      <div class="circle-group circle-44"></div>
+      <div class="circle-group circle-45"></div>
+      <div class="circle-group circle-46"></div>
+      <div class="circle-group circle-47"></div>
+      <div class="circle-group circle-48"></div>
+      <div class="circle-group circle-49"></div>
+      <div class="circle-group circle-50"></div>
+      <div class="circle-group circle-51"></div>
+      <div class="circle-group circle-52"></div>
+      <div class="circle-group circle-53"></div>
+      <div class="circle-group circle-54"></div>
+      <div class="circle-group circle-55"></div>
+      <div class="circle-group circle-56"></div>
+    </div>
+  </body>
+</html>
